@@ -1,9 +1,10 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
-import Akauntor from "/public/akauntor.png";
+
 import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
+const imageUrl = "/akauntor.png";
 
 export default function Home() {
   return (
@@ -48,18 +49,18 @@ export default function Home() {
         />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <div className="flex h-screen flex-col lg:flex-row items-center justify-center w-full">
+      <div className="flex flex-1 h-screen flex-col md:flex-col lg:flex-row items-center justify-center">
         <div className="relative lg:mb-0">
           <Image
             className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-            src={Akauntor}
+            src={imageUrl}
             alt="Akauntor Logo"
-            width={1000}
+            width={800}
             height={100}
             priority
           />
         </div>
-        <div className="flex items-center justify-center text-center lg:text-left lg:flex-1 lg:px-4">
+        <div className="flex flex-1 items-center justify-center text-center lg:text-left lg:flex-1 lg:px-4">
           <span className="text-black text-[200px] font-light">{`{ `}</span>
           <p className="text-black text-base lg:text-lg px-4 mt-8">
             Say hello to the ultimate accounting system for record labels ever
